@@ -93,6 +93,9 @@ get_arch() {
   local arch
   arch=$(uname -m)
   case $arch in
+  "x86_64")
+    echo "amd64"
+    ;;
   "arm")
     echo "armv7" # Super best effort - TODO: find useful way to split armv6/armv7 maybe
     ;;
